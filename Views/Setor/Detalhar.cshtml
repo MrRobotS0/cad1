@@ -1,0 +1,26 @@
+@model Cad1.Models.Setor
+
+@{
+    ViewData["Title"] = "Detalhe setor";
+}
+
+<h1>Detalhes</h1>
+<hr>
+
+<dl class="row">
+    <dt class="col-2">
+        @Html.DisplayNameFor(model => model.SetorId)
+    </dt>
+    <dd class="col-10">
+        @Html.DisplayFor(model => model.SetorId)
+    </dd>
+    <dt class="col-2">
+        @Html.DisplayNameFor(model => model.Nome)
+    </dt>
+    <dd class="col-10">
+        @Html.DisplayFor(model => model.Nome)
+    </dd>
+</dl>
+<hr>
+<a asp-action="Editar" asp-route-id="@Model.SetorId" class="btn btn-dark">Editar</a>
+<a asp-action="Index" class="btn btn-dark">Voltar</a>

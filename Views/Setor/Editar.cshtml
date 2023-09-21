@@ -1,0 +1,22 @@
+@model Cad1.Models.Setor
+
+@{
+    ViewData["Title"] = "Editar Setor";
+}
+
+<h1>Editar setor</h1>
+<hr>
+<div class="row">
+    <div class="col-4">
+        <form asp-action="Editar">
+            <input type="hidden" asp-for="SetorId" />
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Editar" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+</div>

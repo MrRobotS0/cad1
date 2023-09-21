@@ -1,0 +1,30 @@
+@model Cad1.Models.Setor
+
+@{
+    ViewData["Title"] = "Atenção Deleção";
+}
+
+<h1>Deseja realmente deletar o setor abaixo? Sua escolha não tera volta</h1>
+
+<div class="row">
+    <dl>
+    <dt class="col-2">
+        @Html.DisplayNameFor(model => model.SetorId)
+    </dt>
+    <dt class="col-10">
+        @Html.DisplayFor(model => model.SetorId)
+    </dt>
+    <dt class="col-2">
+        @Html.DisplayNameFor(model => model.Nome)
+    </dt>
+    <dt class="col-10">
+        @Html.DisplayFor(model => model.Nome)
+    </dt>
+    </dl>
+</div>
+<form asp-action="Deletar" asp-route-id="@Model.SetorId">
+    <input type="hidden" asp-for="SetorId" />
+    <input type="submit" value="Deletar realmente" class="btn btn-danger">
+</form>
+<hr>
+<a asp-action="Index">Voltar</a>
